@@ -1,13 +1,23 @@
 import React from "react";
 import { useState } from "react";
 
-const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
+const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
   const [number, setNumber] = useState(currentNOE);
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
     setNumber(value);
-    setCurrentNOE(value);
+
+    let infoText;
+    if (isNaN(value)) {
+      infoText = "Invalid, please enter a number";
+    } else if (value < 0) {
+      infoText = "Invalid, please enter a positive number";
+    } else {
+      infoText = "";
+      setCurrentNOE(value);
+    }
+    setErrorAlert(infoText);
   };
 
   return (
