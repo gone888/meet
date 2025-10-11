@@ -18,7 +18,7 @@ const Event = ({ event }) => {
           showDetails ? setShowDetails(false) : setShowDetails(true);
         }}
       >
-        {showDetails ? "hide details" : "show details"}
+        {showDetails ? "Hide details" : "Show details"}
       </button>
     </li>
   );

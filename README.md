@@ -22,9 +22,11 @@
 
 > Scenario 3: User can select a city from the suggested list.
 
-- Given user was typing "Berlin" in the city textbox AND the list of suggested cities is showing;
-- When the user selects a city (e.g., "Berlin, Germany") from the list;
-- Then their city should be changed to that city (i.e., "Berlin, Germany") AND the user should receive a list of upcoming events in that city.
+- Given user was typing “Berlin” in the city textbox
+- And the list of suggested cities is showing;
+- When the user selects a city (e.g., “Berlin, Germany”) from the list;
+- Then their city should be changed to that city (i.e., “Berlin, Germany”)
+- And the user should receive a list of upcoming events in that city
 
 2. Show/Hide Event Details
 
@@ -34,7 +36,7 @@
 
 > Scenario 1: An event element is collapsed by default.
 
-- Given user hasn't opened any event elements;
+- The user opens the events app;
 - When the user is viewing a list of events;
 - Then each of the event elements should be collapsed by default.
 

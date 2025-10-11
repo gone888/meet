@@ -15,6 +15,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
       <label id="number-of-events-label">
         Number of Events:
         <input
+          id="number-of-events-input"
           type="text"
           value={number}
           onChange={handleInputChanged}
