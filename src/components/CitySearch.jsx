@@ -38,6 +38,16 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
     setInfoAlert("");
   };
 
+  const handleListFocus = () => {
+    setShowSuggestions(true);
+  };
+
+  const handleListBlur = () => {
+    setTimeout(() => {
+      setShowSuggestions(false);
+    }, 500);
+  };
+
   return (
     <div id="city-search">
       <input
@@ -45,7 +55,9 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         className="city"
         placeholder="Search for a city"
         value={query}
-        onFocus={() => setShowSuggestions(true)}
+        // onFocus={() => setShowSuggestions(true)}
+        onFocus={handleListFocus}
+        onBlur={handleListBlur}
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
