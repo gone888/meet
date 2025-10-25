@@ -1,5 +1,7 @@
 # Meet App
 
+- Meet is a serverless, progressive web application (PWA) with React built using test-driven development techniques. The application uses the Google Calendar API to fetch upcoming events.
+
 ## Features:
 
 1. Filter Events By City
